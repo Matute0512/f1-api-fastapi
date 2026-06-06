@@ -1,0 +1,48 @@
+[project]
+name = "f1-api-fastapi"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Matute0512",email = "matiast999@hotmail.com"}
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi (>=0.136.3,<0.137.0)",
+    "uvicorn (>=0.49.0,<0.50.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.3,<10.0.0)",
+    "ruff (>=0.15.16,<0.16.0)",
+    "black (>=26.5.1,<27.0.0)",
+    "mypy (>=2.1.0,<3.0.0)",
+    "httpx (>=0.28.1,<0.29.0)"
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py314']
+
+[tool.ruff]
+line-length = 88
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.mypy]
+python_version = "3.14"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
