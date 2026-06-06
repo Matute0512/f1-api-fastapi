@@ -18,6 +18,6 @@ class Driver(BaseModel):
         ..., min_length=2, max_length=100, description="Driver's full name"
     )
     number: int = Field(..., gt=0, lt=100, description="Driver's racing number (1-99)")
-    team: str = Field(
-        ..., min_length=2, max_length=100, description="Current racing team"
+    team_id: UUID = Field(
+        ..., description="Identifier of the team the driver races for"
     )
