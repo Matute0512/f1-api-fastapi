@@ -1,7 +1,7 @@
 import pytest
 from httpx import ASGITransport, AsyncClient
 
-from src.f1_api.main import app
+from f1_api.main import app
 
 
 @pytest.mark.asyncio
@@ -19,4 +19,5 @@ async def test_health_check() -> None:
 
     # Aserciones (Asserts)
     assert response.status_code == 200
-    assert response.json() == {"status": "ok", "message": "F1 API is running smoothly!"}
+    assert response.json() == {"status": "ok",
+                               "message": "F1 API is running smoothly!"}
