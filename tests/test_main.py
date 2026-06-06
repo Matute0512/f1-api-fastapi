@@ -19,5 +19,4 @@ async def test_health_check() -> None:
 
     # Aserciones (Asserts)
     assert response.status_code == 200
-    assert response.json() == {"status": "ok",
-                               "message": "F1 API is running smoothly!"}
+    assert response.json() == {"status": "ok", "message": "F1 API is running smoothly!"}
