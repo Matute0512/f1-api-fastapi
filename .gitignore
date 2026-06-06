@@ -1,0 +1,26 @@
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables and secrets (Critical!)
+.env
+.env.*
+
+# Testing and Quality tools caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# IDEs and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
